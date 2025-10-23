@@ -45,14 +45,15 @@ function App() {
         if (answer === "best friend") {
           Swal.fire({
             title: "🎉 Correct! 🎉",
-            text: "You unlocked the final surprise layer 💖",
+            text: "You unlocked the next layer 💖",
             icon: "success",
             background: "#12071a",
             color: "#fff",
             confirmButtonColor: "#ffcf6b",
             confirmButtonText: "Next Layer 🚀",
           }).then(() => {
-            window.location.href = "https://layer4-final.vercel.app/"; // replace with your final layer URL
+            // ✅ Go to Layer 4 (not final)
+            window.location.href = "https://layer4-final.vercel.app/";
           });
         } else {
           const newAttempts = attempts + 1;
@@ -102,8 +103,7 @@ function App() {
         So close… This one gives you the last clue before the final reveal.
       </p>
 
-      <a
-        href="https://layer4-final.vercel.app/"
+      <button
         onClick={handleNextLayer}
         style={{
           backgroundColor: "#ffcf6b",
@@ -116,13 +116,12 @@ function App() {
           cursor: "pointer",
           transition: "0.3s",
           boxShadow: "0 0 15px rgba(255,207,107,0.6)",
-          opacity: attempts >= maxAttempts ? 0.6 : 1,
-          pointerEvents: attempts >= maxAttempts ? "none" : "auto",
         }}
       >
         Keep going ✨
-      </a>
+      </button>
     </div>
   );
 }
+
 export default App;

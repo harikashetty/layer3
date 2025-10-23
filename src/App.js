@@ -53,7 +53,8 @@ function App() {
             confirmButtonText: "Next Layer 🚀",
           }).then(() => {
             // ✅ Go to Layer 4 (not final)
-            window.location.href = "https://layer4-final.vercel.app/";
+           window.location.href = "https://layer3-534h.vercel.app/";
+
           });
         } else {
           const newAttempts = attempts + 1;
